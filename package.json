@@ -9,7 +9,6 @@
   "scripts": {
     "test": "mocha",
     "postinstall": "check-node-version --node '>= 6.4.0'",
-    "lint": "standard",
     "init-fixtures": "./scripts/init_fixtures",
     "update-toc": "./scripts/update_toc",
     "prepublishOnly": "npm run lint && npm test"
@@ -22,6 +21,7 @@
   "author": "maxlath",
   "license": "MIT",
   "dependencies": {
+    "binary-split": "^1.0.5",
     "check-node-version": "^2.1.0",
     "commander": "^2.9.0",
     "lodash.difference": "^4.2.0",
@@ -30,7 +30,10 @@
     "lodash.pick": "^4.2.0",
     "lodash.some": "^4.6.0",
     "lodash.throttle": "^4.1.1",
+    "node-worker-threads-pool": "^1.0.8",
+    "simdjson": "^0.2.1",
     "split": "^1.0.0",
+    "split2": "^3.1.1",
     "through": "^2.3.8",
     "wikidata-sdk": "^6.4.0"
   },
@@ -38,8 +41,7 @@
     "doctoc": "^1.2.0",
     "git-hooks": "^1.1.7",
     "mocha": "^3.2.0",
-    "should": "^11.1.2",
-    "standard": "^8.6.0"
+    "should": "^11.1.2"
   },
   "repository": {
     "type": "git",
@@ -49,12 +51,6 @@
     "url": "https://github.com/maxlath/wikidata-filter/issues"
   },
   "homepage": "https://github.com/maxlath/wikidata-filter#readme",
-  "standard": {
-    "globals": [
-      "it",
-      "describe"
-    ]
-  },
   "engines": {
     "node": ">= 6.4.0"
   }
